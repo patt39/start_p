@@ -1,0 +1,40 @@
+
+{% extends 'darry/base.html' %}
+
+ {% block content %}
+<div class="container">
+  <h1>Register</h1>
+  <div class="row">
+    <form method="POST">
+      {% csrf_token %}
+      {{ form }}
+  <fieldset>
+    <legend>Join Us</legend>
+     <div class="form-group">
+      <label for="name@domain">First name</label>
+      <input type="Enter first name" class="form-control" id="name1"  placeholder="Enter first name">
+       <label for="name@domain">Last name</label>
+      <input type="Enter last name" class="form-control" id="name2"  placeholder="Enter last name">
+       <label for="name@domain">Username</label>
+      <input type="Enter username" class="form-control" id="username"  placeholder="Enter username">
+       <label for="name@domain">Email address</label>
+      <input type="email" class="form-control" id="name@domain" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">we'ill never share your email with anyone.</small>
+      <label for="enter password">Password</label>
+      <input type="password" class="form control" id="enter password" aria-describedby="passwordHelp" placeholder="Enter passwood">
+      <small id="passwordHelp" class="form-text text-muted">Alphanumeric atleast 8 characters.</small>
+      <label for="enter password">Confirm password</label>
+      <input type="password" class="form control"  placeholder="confirm passwood">
+
+    </div>
+    <button type="submit" class="btn btn-warning">Sign up</button>
+  </fieldset>
+</form>
+    <div class="border-top pt-3">
+      <small class="form-text text-muted">Already have an account? <a class="ml-2" href="#">Sign in </a>
+      </small>
+    </div>
+  </div>
+</div>
+{%  endblock content %}
+
